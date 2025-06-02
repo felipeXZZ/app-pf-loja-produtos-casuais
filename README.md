@@ -21,7 +21,7 @@ Projeto de e-commerce desenvolvido como atividade prática da disciplina de Prog
 - Adição de produtos ao **carrinho de compras**
 - Página de **checkout**
 - **Responsividade** para dispositivos móveis
-- Campo de **busca** de produtos *(em desenvolvimento)*
+- Campo de **busca** de produtos
 
 ## Autor(es)
   
