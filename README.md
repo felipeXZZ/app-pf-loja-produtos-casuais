@@ -26,7 +26,10 @@ Projeto de e-commerce desenvolvido como atividade prática da disciplina de Prog
 ## Autor(es)
   
 - Felipe Guilherme Teodolino RA: 212392
-- 
+- Phelippe Oliveira Santos RA: 211268
+- Carlos Eduardo Santos Silva RA: 213032
+- Caio Santos Ferreira RA: 209281
+- Carlos Eduardo Brandão Souza RA: 202493
 
 ---
 
