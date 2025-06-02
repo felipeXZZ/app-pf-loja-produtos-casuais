@@ -30,6 +30,7 @@ Projeto de e-commerce desenvolvido como atividade prática da disciplina de Prog
 - Carlos Eduardo Santos Silva RA: 213032
 - Caio Santos Ferreira RA: 209281
 - Carlos Eduardo Brandão Souza RA: 202493
+- Giovane pereira Silva RA: 063683
 
 ---
 
