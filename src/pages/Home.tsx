@@ -98,30 +98,30 @@ const Home: React.FC = () => {
       ) : (
         <div className="space-y-4">
           {filteredProducts.map(product => (
-            <div key={product.id} className="flex bg-white rounded-lg shadow-sm overflow-hidden">
-              <div className="w-40 h-40 flex-shrink-0">
+            <div key={product.id} className="flex flex-col sm:flex-row bg-white rounded-lg shadow-sm overflow-hidden">
+              <div className="w-full sm:w-40 h-40">
                 <img 
                   src={product.image} 
                   alt={product.name} 
                   className="w-full h-full object-cover object-center"
                 />
               </div>
-              <div className="p-4 flex-1 flex flex-col justify-between">
-                <div>
+              <div className="p-4 flex flex-col flex-grow">
+                <div className="flex-grow">
                   <Link to={`/product/${product.id}`}>
                     <h3 className="text-lg font-medium text-black hover:text-gray-800 transition-colors">{product.name}</h3>
                   </Link>
                   <p className="mt-1 text-sm text-black line-clamp-2">{product.description}</p>
                 </div>
-                <div className="flex justify-between items-end mt-2">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-4 gap-2">
                   <p className="text-xl font-bold text-black">
                     {formatCurrency(product.price)}
                   </p>
                   <button
                     onClick={() => addToCart(product, 1)}
-                    className="inline-flex items-center px-3 py-1.5 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-white hover:text-black hover:border-black"
+                    className="w-full sm:w-auto whitespace-nowrap inline-flex items-center justify-center px-3 py-1.5 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-white hover:text-black hover:border-black transition-colors"
                   >
-                    <ShoppingCart className="h-4 w-4 mr-1" />
+                    <ShoppingCart className="h-4 w-4 mr-1 flex-shrink-0" />
                     Adicionar ao Carrinho
                   </button>
                 </div>
