@@ -38,7 +38,7 @@ Projeto de e-commerce desenvolvido como atividade prática da disciplina de Prog
 
 ---
 
-## 🧪 Como Rodar o Projeto Localmente
+## Como Rodar o Projeto Localmente
 
 1. **Clone o repositório**:
    ```bash
