@@ -33,6 +33,10 @@ Projeto de e-commerce desenvolvido como atividade prática da disciplina de Prog
 
 ---
 
+## Este projeto é acadêmico e não possui fins comerciais.
+
+---
+
 ## 🧪 Como Rodar o Projeto Localmente
 
 1. **Clone o repositório**:
