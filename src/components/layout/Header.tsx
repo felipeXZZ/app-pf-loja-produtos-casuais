@@ -48,13 +48,15 @@ const Header: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
+          {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
-              <ShoppingBag className="h-8 w-8" />
-              <span className="ml-2 text-xl font-bold">ModaCasual</span>
+              <ShoppingBag className="h-6 w-6 sm:h-8 sm:w-8" />
+              <span className="ml-2 text-lg sm:text-xl font-bold">ModaCasual</span>
             </Link>
           </div>
           
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             <Link to="/" className="text-black hover:text-gray-600 transition-colors px-3 py-2 font-medium">
               Início
@@ -64,6 +66,7 @@ const Header: React.FC = () => {
             </Link>
           </nav>
           
+          {/* Desktop Search and Cart */}
           <div className="hidden md:flex items-center space-x-6">
             <form onSubmit={handleSearch} className="flex items-center">
               <input
@@ -90,14 +93,15 @@ const Header: React.FC = () => {
             </Link>
           </div>
           
-          <div className="md:hidden flex items-center">
-            <form onSubmit={handleSearch} className="flex items-center mr-2">
+          {/* Mobile Header */}
+          <div className="flex md:hidden items-center space-x-2">
+            <form onSubmit={handleSearch} className="flex items-center max-w-[140px]">
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Buscar..."
-                className="px-3 py-1 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent text-sm"
+                className="w-full px-2 py-1 text-sm border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
               />
               <button
                 type="submit"
@@ -106,24 +110,25 @@ const Header: React.FC = () => {
                 <Search className="h-4 w-4" />
               </button>
             </form>
-            <Link to="/cart" className="p-2 mr-2 relative">
-              <ShoppingBag className="h-6 w-6" />
+            <Link to="/cart" className="p-1 relative">
+              <ShoppingBag className="h-5 w-5" />
               {totalItems > 0 && (
-                <span className="absolute -top-1 -right-1 bg-black text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-black text-white text-xs rounded-full h-4 w-4 flex items-center justify-center text-[10px]">
                   {totalItems}
                 </span>
               )}
             </Link>
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-lg text-black hover:bg-gray-100 focus:outline-none"
+              className="p-1 rounded-lg text-black hover:bg-gray-100 focus:outline-none"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
           </div>
         </div>
       </div>
       
+      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-100">
           <div className="px-2 pt-2 pb-3 space-y-1">
